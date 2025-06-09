@@ -1,0 +1,130 @@
+.skills-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 2.5vw;
+}
+
+.skills-page h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.skills-page h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  border-radius: 2px;
+}
+
+.cards-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24rem;
+  row-gap: 10rem;
+  justify-items: stretch;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 100%;
+}
+
+.new-skill-card {
+  background: unset;
+  border-radius: unset;
+  padding: unset;
+  box-shadow: unset;
+  border: unset;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.skill-icon {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 0.02em;
+}
+
+.progress-bar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-right: 0.7rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #b1b3c6 0%, #1e1d1f 100%);
+  border-radius: 6px;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-percent {
+  font-size: 1rem;
+  color: #7b7b7b;
+  font-weight: 500;
+  min-width: 36px;
+  text-align: right;
+}
+
+.skill-description {
+  font-size: 1.05rem;
+  color: #666;
+  margin: 0 0 1.2rem 0;
+  font-weight: 400;
+}
+
+@media (max-width: 1400px) {
+  .cards-layout {
+    column-gap: 10rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cards-layout {
+    column-gap: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cards-layout {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+} 

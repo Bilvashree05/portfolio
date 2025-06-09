@@ -1,0 +1,129 @@
+.projects-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 2vw;
+}
+
+.projects-page h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.projects-page h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #2c3e50, #eea7e4);
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem; /* Only vertical gap since each card is one row */
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem; /* Add padding to the card itself */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align children to the left */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+  transform: translateY(-4px) scale(1.005); /* Subtle scale */
+}
+
+.project-image-wrap {
+  width: 500px; /* Smaller width for the image */
+  height: 300px; /* Smaller height for the image */
+  margin: 0 0 1.5rem 0; /* Remove side margins, keep bottom margin for spacing */
+  border-radius: 12px; /* Rounded corners for the image container */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F8F4; /* Light beige background as seen in screenshot */
+}
+
+.project-image {
+  max-width: 90%; /* Ensure image fits within the wrap */
+  max-height: 90%; /* Ensure image fits within the wrap */
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.project-info {
+  padding: 0; /* Remove padding here, let parent card's padding handle it */
+}
+
+.project-info h3 {
+  font-size: 1.8rem; /* Make the title larger */
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.project-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: #d8cee0;
+  color: black;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .project-card {
+    margin: 0 1rem;
+    padding: 1rem; /* Smaller internal padding for mobile */
+  }
+  .project-image-wrap {
+    width: 80px; /* Even smaller width for the image on mobile */
+    height: 80px; /* Even smaller height for the image on mobile */
+    margin: 0 0 1rem 0; /* Adjusted bottom margin for mobile */
+  }
+  .project-info {
+    padding: 0; /* No padding */
+  }
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+  .project-desc {
+    font-size: 0.9rem;
+  }
+  .tech-tag {
+    font-size: 0.8rem;
+  }
+} 
